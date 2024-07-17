@@ -12,8 +12,10 @@ const props = defineProps({
   }
 })
 
+// default color of the globe svg
 const svgColor = ref('#4f46e5')
 
+// dynamically change the globe svg color based on the active condition
 const toggleCountry = (id) => {
   props.data.forEach((v) => {
     v.active = v.id === id
@@ -42,6 +44,7 @@ const toggleCountry = (id) => {
       @click="toggleCountry(item.id)"
     >
       <div v-if="item.icon" style="margin-right: 4px">
+        <!-- svg only for the globe so it can change color dynamically -->
         <svg
           v-if="item.id === 0"
           :style="{ fill: svgColor }"
@@ -55,6 +58,7 @@ const toggleCountry = (id) => {
           />
         </svg>
 
+        <!-- img for the flags that doesnt need the color to be changed  -->
         <img
           v-else
           :src="`src/assets/icon/${item.icon}`"

@@ -58,6 +58,7 @@ const useIconPath = (v) => {
 </script>
 
 <template>
+  <!-- button with only one icon on the left -->
   <button
     v-if="useSingleIcon"
     class="cursor-pointer bg-none radius-24 gray-60 border-gray-30 w-100 padding-button 100 d-flex item-center justify-center"
@@ -67,6 +68,7 @@ const useIconPath = (v) => {
     <span class="text-sm-bold" :class="{ 'gray-0': purple }">{{ title }}</span>
   </button>
 
+  <!-- button with two icon, both front and end -->
   <button
     v-if="useTwoIcon"
     class="cursor-pointer border-none radius-24 w-100 d-flex item-center justify-center bg-blue-60 gray-0 padding-button"
@@ -76,6 +78,7 @@ const useIconPath = (v) => {
     <img :src="useIconPath('End')" style="margin-left: 8px" />
   </button>
 
+  <!-- button with only icon without text -->
   <button v-if="useIcon" class="cursor-pointer border-none bg-none">
     <img :src="useIconPath('Icon')" />
   </button>

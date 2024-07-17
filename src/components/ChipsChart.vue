@@ -22,6 +22,7 @@ defineProps({
       'gray-0 bg-failed': type === 'failed'
     }"
   >
+    <!-- 3 if for 3 conditions the icon to be showed -->
     <span v-if="type === 'success'">
       <img src="@/assets/icon/TrendUp.png" width="12" height="12" />
     </span>
@@ -31,6 +32,7 @@ defineProps({
     <span v-if="type === 'failed'">
       <img src="@/assets/icon/TrendUpWhite.png" width="12" height="12" />
     </span>
+    <!-- text for the title of the chips -->
     {{ text }}
   </div>
 </template>

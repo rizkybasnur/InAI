@@ -5,6 +5,7 @@ import ButtonComponent from './components/ButtonComponent.vue'
 import CardComponent from './components/CardComponent.vue'
 import ChipsChart from '@/components/ChipsChart.vue'
 
+// <!-- start: populate data for portfolio section -->
 const tagData = reactive([
   { id: 0, name: 'All', active: true },
   { id: 1, name: 'Realised gains', active: false },
@@ -35,23 +36,31 @@ const unrealised = ref([
   { name: 'Unrealised gains', dollar: '+$2,066,372', percent: '+2.9%' }
 ])
 
+// note: filtering only the active object
 const active = computed(() => tagData.filter((e) => e.active))
+
+// note:checking value to determine the condition of the chips
 const checkValue = (v) => {
   if (v.slice(0, 1) === '+') return 'successBold'
   if (v.slice(0, 1) === '-') return 'failed'
 }
+
+// note: looking the change of data to assign different value to dummy to show
 watch(tagData, () => {
   if (active.value[0].id === 0) portfolio.value = all.value
   if (active.value[0].id === 1) portfolio.value = realised.value
   if (active.value[0].id === 2) portfolio.value = unrealised.value
 })
+// <!-- end: populate data for portfolio section -->
 
+// note: value for ai suggestion
 const suggestions = reactive([
   'Listed shares balances per month?',
   'Liquid assets per account?',
   'What are current portfolio risks?'
 ])
 
+// note: value for tab data
 const countries = reactive([
   { id: 0, name: 'All', icon: 'Global.svg', active: true },
   { id: 1, name: 'Australia', icon: 'Australia.png', active: false },
@@ -62,6 +71,7 @@ const countries = reactive([
 
 <template>
   <header>
+    <!-- start: section navigation -->
     <nav style="display: flex; justify-content: space-between; align-items: center">
       <img
         class="cursor-pointer"
@@ -79,10 +89,12 @@ const countries = reactive([
         height="40"
       />
     </nav>
+    <!-- start: section navigation -->
   </header>
 
   <main>
-    <div class="wrapper">
+    <!-- start: section net assets and gross income -->
+    <section class="wrapper">
       <div
         style="margin: 16px 0; display: flex; align-items: center; justify-content: space-between"
       >
@@ -117,9 +129,11 @@ const countries = reactive([
 
         <CardComponent class="cardOutlineBig" white no-chip />
       </div>
-    </div>
+    </section>
+    <!-- end: section net assets and gross income -->
 
-    <div
+    <!-- start: section button asset and entity -->
+    <section
       class="buttonAdd"
       style="margin: 24px 0; display: flex; justify-content: space-between; gap: 8px"
     >
@@ -134,9 +148,11 @@ const countries = reactive([
         urlStart="../assets/icon/Buildings.png"
         title="Add new entity"
       />
-    </div>
+    </section>
+    <!-- end: section button asset and entity -->
 
-    <div class="flexBig">
+    <!-- start: section portfolio and ai suggestion -->
+    <section class="flexBig">
       <div
         class="portfolioBig"
         style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 16px"
@@ -162,7 +178,7 @@ const countries = reactive([
       <CardComponent class="cardOutlineSmall" white no-chip />
 
       <div class="aiBig">
-        <div class="text-md-bold my-16">AI suggested queries</div>
+        <div class="text-md-bold mb-16">AI suggested queries</div>
         <div>
           <button
             v-for="(s, i) in suggestions"
@@ -175,8 +191,11 @@ const countries = reactive([
           <div class="nonBig" style="width: 100%; border-bottom: 1px solid #cbd5e1"></div>
         </div>
       </div>
-    </div>
-    <div
+    </section>
+    <!-- end: section portfolio and ai suggestion -->
+
+    <!-- start: section button customize and widget -->
+    <section
       class="pBig"
       style="margin-top: 16px; display: flex; justify-content: center; gap: 8px; padding: 0 24px"
     >
@@ -190,8 +209,7 @@ const countries = reactive([
         urlStart="../assets/icon/CloudArrowUp.png"
         title="Add Widget"
       />
-    </div>
+    </section>
+    <!-- start: section button customize and widget -->
   </main>
-
-  <!-- <RouterView /> -->
 </template>

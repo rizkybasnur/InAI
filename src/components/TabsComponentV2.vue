@@ -1,7 +1,5 @@
 <script setup>
-import { ref } from 'vue'
-
-const props = defineProps({
+defineProps({
   data: {
     type: Array,
     required: true
@@ -11,19 +9,6 @@ const props = defineProps({
     default: true
   }
 })
-
-const svgColor = ref('#4f46e5')
-
-const toggleCountry = (id) => {
-  props.data.forEach((v) => {
-    v.active = v.id === id
-  })
-  if (id === 0) {
-    svgColor.value = '#4f46e5'
-  } else {
-    svgColor.value = '#475569'
-  }
-}
 </script>
 
 <template>

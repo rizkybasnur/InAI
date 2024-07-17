@@ -19,16 +19,12 @@ const props = defineProps({
     }
   }
 })
-
-const dataTab = reactive([
-  { id: 0, name: 'Day', active: true },
-  { id: 1, name: 'Month', active: false },
-  { id: 2, name: 'Quarter', active: false },
-  { id: 3, name: 'FY 2024', active: false }
-])
-
+// <!-- start: populate data for net assets section -->
+// note: data come from props is data that used to determined the object active or not
+// note: filtering only the active object
 const active = computed(() => props.data.filter((e) => e.active))
 
+// note: looking the change of data to assign different value to dummy to show
 watch(props.data, () => {
   if (active.value[0].id === 0) dummy.value = dummyAll.value
   if (active.value[0].id === 1) dummy.value = dummyAus.value
@@ -36,8 +32,54 @@ watch(props.data, () => {
   if (active.value[0].id === 3) dummy.value = dummyEurope.value
 })
 
+let dummy = ref({
+  total: '$74,769,618',
+  percentage: '+0.1%',
+  gross: '$78,789,618',
+  liabilities: '$4,020,000'
+})
+
+let dummyAll = ref({
+  total: '$74,asdasd,618',
+  percentage: '+0.1asdasd%',
+  gross: '$78,789,618',
+  liabilities: '$4,020,000'
+})
+
+let dummyAus = ref({
+  total: '$74,769,618',
+  percentage: '+zxczxc0.1%',
+  gross: '$78,789,zxczxc618',
+  liabilities: '$4,020,000'
+})
+
+let dummyUsa = ref({
+  total: '$74,769avjnfcgvbjn,618',
+  percentage: '+0.1%',
+  gross: '$78,789,xcv618',
+  liabilities: '$12,020,000'
+})
+
+let dummyEurope = ref({
+  total: '$74,769asdas,618',
+  percentage: '+0.1%',
+  gross: '$78,789zxc,618',
+  liabilities: '$1,020,000'
+})
+// <!-- end: populate data for net assets section -->
+
+// <!-- start: populate data for gross income section -->
+const dataTab = reactive([
+  { id: 0, name: 'Day', active: true },
+  { id: 1, name: 'Month', active: false },
+  { id: 2, name: 'Quarter', active: false },
+  { id: 3, name: 'FY 2024', active: false }
+])
+
+// note: filtering only the active object
 const gross = computed(() => dataTab.filter((e) => e.active))
 
+// note: looking the change of data to assign different value to dummy to show
 watch(dataTab, () => {
   if (gross.value[0].id === 0) dummy2.value = dummy2All.value
   if (gross.value[0].id === 1) dummy2.value = dummy2Aus.value
@@ -79,41 +121,7 @@ let dummy2Europe = ref({
   gross: '$78,789zxc,618',
   liabilities: '$4,020,000'
 })
-
-let dummy = ref({
-  total: '$74,769,618',
-  percentage: '+0.1%',
-  gross: '$78,789,618',
-  liabilities: '$4,020,000'
-})
-
-let dummyAll = ref({
-  total: '$74,asdasd,618',
-  percentage: '+0.1asdasd%',
-  gross: '$78,789,618',
-  liabilities: '$4,020,000'
-})
-
-let dummyAus = ref({
-  total: '$74,769,618',
-  percentage: '+zxczxc0.1%',
-  gross: '$78,789,zxczxc618',
-  liabilities: '$4,020,000'
-})
-
-let dummyUsa = ref({
-  total: '$74,769avjnfcgvbjn,618',
-  percentage: '+0.1%',
-  gross: '$78,789,xcv618',
-  liabilities: '$12,020,000'
-})
-
-let dummyEurope = ref({
-  total: '$74,769asdas,618',
-  percentage: '+0.1%',
-  gross: '$78,789zxc,618',
-  liabilities: '$1,020,000'
-})
+// <!-- end: populate data for gross income section -->
 </script>
 
 <template>
