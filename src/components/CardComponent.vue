@@ -1,0 +1,160 @@
+<script setup>
+import TabsComponentV2 from '@/components/TabsComponentV2.vue'
+import { reactive, ref, watch, computed } from 'vue'
+import ChipsChart from './ChipsChart.vue'
+
+const props = defineProps({
+  white: {
+    type: Boolean,
+    default: false
+  },
+  noChip: {
+    type: Boolean,
+    default: false
+  },
+  data: {
+    type: Array,
+    default: () => {
+      return []
+    }
+  }
+})
+
+const dataTab = reactive([
+  { id: 0, name: 'Day', active: true },
+  { id: 1, name: 'Month', active: false },
+  { id: 2, name: 'Quarter', active: false },
+  { id: 3, name: 'FY 2024', active: false }
+])
+
+const active = computed(() => props.data.filter((e) => e.active))
+
+watch(props.data, () => {
+  if (active.value[0].id === 0) dummy.value = dummyAll.value
+  if (active.value[0].id === 1) dummy.value = dummyAus.value
+  if (active.value[0].id === 2) dummy.value = dummyUsa.value
+  if (active.value[0].id === 3) dummy.value = dummyEurope.value
+})
+
+const gross = computed(() => dataTab.filter((e) => e.active))
+
+watch(dataTab, () => {
+  if (gross.value[0].id === 0) dummy2.value = dummy2All.value
+  if (gross.value[0].id === 1) dummy2.value = dummy2Aus.value
+  if (gross.value[0].id === 2) dummy2.value = dummy2Usa.value
+  if (gross.value[0].id === 3) dummy2.value = dummy2Europe.value
+})
+
+let dummy2 = ref({
+  total: '$74,769,618',
+  percentage: '+0.1%',
+  gross: '$78,789,618',
+  liabilities: '$4,020,000'
+})
+
+let dummy2All = ref({
+  total: '$74,asdasd,618',
+  percentage: '+0.1asdasd%',
+  gross: '$78,789,618',
+  liabilities: '$4,020,000'
+})
+
+let dummy2Aus = ref({
+  total: '$74,769,618',
+  percentage: '+zxczxc0.1%',
+  gross: '$78,789,zxczxc618',
+  liabilities: '$4,020,000'
+})
+
+let dummy2Usa = ref({
+  total: '$74,769avjnfcgvbjn,618',
+  percentage: '+0.1%',
+  gross: '$78,789,xcv618',
+  liabilities: '$4,020,000'
+})
+
+let dummy2Europe = ref({
+  total: '$74,769asdas,618',
+  percentage: '+0.1%',
+  gross: '$78,789zxc,618',
+  liabilities: '$4,020,000'
+})
+
+let dummy = ref({
+  total: '$74,769,618',
+  percentage: '+0.1%',
+  gross: '$78,789,618',
+  liabilities: '$4,020,000'
+})
+
+let dummyAll = ref({
+  total: '$74,asdasd,618',
+  percentage: '+0.1asdasd%',
+  gross: '$78,789,618',
+  liabilities: '$4,020,000'
+})
+
+let dummyAus = ref({
+  total: '$74,769,618',
+  percentage: '+zxczxc0.1%',
+  gross: '$78,789,zxczxc618',
+  liabilities: '$4,020,000'
+})
+
+let dummyUsa = ref({
+  total: '$74,769avjnfcgvbjn,618',
+  percentage: '+0.1%',
+  gross: '$78,789,xcv618',
+  liabilities: '$12,020,000'
+})
+
+let dummyEurope = ref({
+  total: '$74,769asdas,618',
+  percentage: '+0.1%',
+  gross: '$78,789zxc,618',
+  liabilities: '$1,020,000'
+})
+</script>
+
+<template>
+  <div
+    style=""
+    class="p-16 radius-24 d-flex flex-column gap-12"
+    :class="white ? 'blue-60 bg-none border-card' : 'gray-0 background-color bg-purple-30'"
+  >
+    <div class="d-flex justify-between">
+      <div class="card-title">{{ !white ? 'Net assets' : 'Gross  income' }}</div>
+      <div>:</div>
+    </div>
+    <div class="d-flex justify-between item-center">
+      <div>
+        <div class="heading-sm-bold mb-8">{{ !white ? dummy?.total : dummy2.total }}</div>
+        <div class="d-flex gap-8">
+          <ChipsChart type="success" :text="!white ? dummy?.percentage : dummy2.percentage" />
+          <span v-if="white">vs</span>
+          <ChipsChart type="normal" text="last day" />
+        </div>
+      </div>
+      <img v-if="!white" src="@/assets/icon/Icon Container (1).png" width="48" height="48" />
+      <img v-if="white" src="@/assets/icon/Icon Container.png" width="48" height="48" />
+    </div>
+    <div>
+      <div>
+        <span class="card-text">{{ white ? 'Less expenses:' : 'Gross assets:' }}</span>
+        <span class="card-text-bold" :class="{ 'destructive-90': white }">
+          {{ !white ? dummy?.gross : dummy2.gross }}
+        </span>
+      </div>
+      <div>
+        <span class="card-text">Net income:</span>
+        <span class="card-text-bold" :class="{ ' destructive-30': !white }">
+          {{ !white ? dummy.liabilities : dummy2.liabilities }}
+        </span>
+      </div>
+    </div>
+
+    <div v-if="white">
+      <TabsComponentV2 :data="dataTab" />
+    </div>
+  </div>
+</template>

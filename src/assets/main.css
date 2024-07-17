@@ -1,0 +1,459 @@
+@import './base.css';
+
+#app {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: normal;
+  width: 100%;
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.008em;
+  text-align: left;
+}
+
+.card-text {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: -0.006em;
+  text-align: left;
+}
+
+.card-text-bold {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: -0.006em;
+  text-align: left;
+}
+
+.text-sm-bold {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.006em;
+  text-align: left;
+}
+
+.text-sm-semibold {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: -0.006em;
+  text-align: left;
+}
+
+.text-xs-semibold {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: -0.005em;
+  text-align: center;
+}
+
+.padding-chip {
+  padding: 4px 8px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.item-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.gap-4 {
+  gap: 4px;
+}
+
+.gap-8 {
+  gap: 8px;
+}
+
+.gap-12 {
+  gap: 12px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.bg-blue-60 {
+  background-color: #1e293b;
+}
+
+.blue-60 {
+  background-color: #1e293b;
+}
+
+.border-card {
+  border: 1px solid #e2e8f0;
+}
+
+.radius-24 {
+  border-radius: 24px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.grey-60 {
+  color: #475569;
+}
+
+.border-tab-active {
+  border: 1px #4f46e5 solid;
+}
+
+.bg-none {
+  background-color: transparent;
+}
+
+.border-gray-30 {
+  border: 1px solid rgba(203, 213, 225, 1);
+}
+
+.heading-sm-bold {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 38px;
+  letter-spacing: -0.013em;
+  text-align: center;
+}
+
+.heading-xs-extrabold {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 32px;
+  letter-spacing: -0.012em;
+  text-align: left;
+}
+
+.text-lg-bold {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.008em;
+  text-align: left;
+}
+
+.text-md-bold {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: -0.007em;
+  text-align: left;
+}
+
+.border-suggestion {
+  border: 1px solid #cbd5e1;
+}
+
+.padding-suggestion {
+  padding: 10px 16px;
+}
+
+.p-16 {
+  padding: 16px;
+}
+
+.p-tab {
+  padding: 8px 20px;
+}
+
+.p-4 {
+  padding: 4px;
+}
+
+.my-16 {
+  margin: 16px 0;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.padding-tab {
+  padding: 8px 12px;
+}
+
+.mb-8 {
+  margin-bottom: 8px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+.border-none {
+  border: none;
+}
+
+.gray-80 {
+  color: rgba(30, 41, 59, 1);
+}
+
+.radius-24 .bg-gray-0 {
+  background-color: #ffffff;
+}
+.mr-8 {
+  margin-right: 8px;
+}
+
+.bg-gray-5 {
+  background-color: #f8fafc;
+}
+
+.bg-purple-30 {
+  background-color: #7e22ce;
+}
+
+.padding-button {
+  padding: 12px 0;
+}
+
+.gray-0 {
+  color: #ffffff;
+}
+
+.gray-60 {
+  color: rgba(71, 85, 105, 1);
+}
+
+.bg-success-5 {
+  background-color: #f0fdf4;
+}
+
+.bg-failed {
+  background-color: red;
+}
+
+.success-50 {
+  color: #22c55e;
+}
+
+.bg-success-80 {
+  background-color: rgba(34, 197, 94, 1);
+}
+
+.destructive-30 {
+  color: #fda4af;
+}
+
+.destructive-90 {
+  color: #881336;
+}
+
+.bg-grey-2 {
+  background-color: #f1f5f9;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-brand-60 {
+  background-color: #4f46e5;
+}
+
+.bg-brand-5 {
+  background-color: rgba(238, 242, 255, 1);
+}
+
+.bg-grey-1 {
+  background-color: #eef2ff;
+}
+
+.purple {
+  color: #4f46e5;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.typewriter h6 {
+  color: #64748b;
+  font-family: monospace;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3.5s steps(30, end);
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+header {
+  line-height: 1.5;
+  max-height: 100vh;
+}
+
+.logo {
+  display: block;
+}
+
+nav {
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a.router-link-exact-active {
+  color: var(--color-text);
+}
+
+nav a.router-link-exact-active:hover {
+  background-color: transparent;
+}
+
+nav a {
+  display: inline-block;
+  border-left: 1px solid var(--color-border);
+}
+
+nav a:first-of-type {
+  border: 0;
+}
+
+@media (max-width: 1023px) {
+  .inputSearch {
+    display: none;
+  }
+
+  .cardOutlineBig {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    padding: 0rem 5rem 2rem 5rem;
+  }
+
+  header {
+    place-items: center;
+  }
+
+  nav {
+    text-align: left;
+    margin-left: -1rem;
+    font-size: 1rem;
+
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
+
+  .buttonSearch {
+    display: none;
+  }
+
+  .containerBig {
+    padding: 1.5rem;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 24px;
+    width: 50%;
+    margin-right: 12px;
+  }
+
+  .cardOutlineSmall {
+    display: none;
+  }
+
+  .cardOutlineBig {
+    padding: 1.5rem;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 24px;
+    width: 50%;
+  }
+
+  .buttonAdd {
+    display: none;
+  }
+
+  .portfolioBig {
+    padding: 1.5rem;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 24px;
+    width: 50%;
+    margin-right: 12px;
+    margin-bottom: 0px !important;
+  }
+
+  .aiBig {
+    padding: 1.5rem;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 24px;
+    width: 50%;
+  }
+
+  .flexBig {
+    display: flex !important;
+  }
+
+  .nonBig {
+    display: none;
+  }
+
+  .pBig {
+    padding: 0 !important;
+  }
+
+  .typewriter h6 {
+    color: #64748b;
+    font-family: monospace;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 10s steps(120, end);
+  }
+
+  .cardTabBig {
+    justify-content: center;
+    width: 50%;
+  }
+}
