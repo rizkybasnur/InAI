@@ -131,8 +131,15 @@ let dummy2Europe = ref({
     :class="white ? 'blue-60 bg-none border-card' : 'gray-0 background-color bg-purple-30'"
   >
     <div class="d-flex justify-between">
-      <div class="card-title">{{ !white ? 'Net assets' : 'Gross  income' }}</div>
-      <div>:</div>
+      <div :class="!white ? 'card-title' : 'text-lg-bold'">
+        {{ !white ? 'Net assets' : 'Gross  income' }}
+      </div>
+      <img
+        class="cursor-pointer"
+        src="@/assets/icon/DotsThreeOutlineVertical.png"
+        width="20"
+        height="20"
+      />
     </div>
     <div class="d-flex justify-between item-center">
       <div>
