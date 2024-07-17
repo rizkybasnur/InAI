@@ -41,30 +41,30 @@ let dummy = ref({
 
 let dummyAll = ref({
   total: '$74,asdasd,618',
-  percentage: '+0.1asdasd%',
+  percentage: '+0.1%',
   gross: '$78,789,618',
   liabilities: '$4,020,000'
 })
 
 let dummyAus = ref({
-  total: '$74,769,618',
-  percentage: '+zxczxc0.1%',
-  gross: '$78,789,zxczxc618',
-  liabilities: '$4,020,000'
+  total: '$102,769,618',
+  percentage: '2.2%',
+  gross: '$105,789,618',
+  liabilities: '$3,020,000'
 })
 
 let dummyUsa = ref({
-  total: '$74,769avjnfcgvbjn,618',
-  percentage: '+0.1%',
-  gross: '$78,789,xcv618',
-  liabilities: '$12,020,000'
+  total: '$20,769,618',
+  percentage: '+1.1%',
+  gross: '$24,789,618',
+  liabilities: '$4,020,000'
 })
 
 let dummyEurope = ref({
-  total: '$74,769asdas,618',
-  percentage: '+0.1%',
-  gross: '$78,789zxc,618',
-  liabilities: '$1,020,000'
+  total: '$15,769,618',
+  percentage: '+0.21%',
+  gross: '$18,789,618',
+  liabilities: '$3,020,000'
 })
 // <!-- end: populate data for net assets section -->
 
@@ -88,37 +88,37 @@ watch(dataTab, () => {
 })
 
 let dummy2 = ref({
-  total: '$74,769,618',
-  percentage: '+0.1%',
+  total: '$64,769,618',
+  percentage: '+0.3%',
   gross: '$78,789,618',
-  liabilities: '$4,020,000'
+  liabilities: '$10,020,000'
 })
 
 let dummy2All = ref({
-  total: '$74,asdasd,618',
-  percentage: '+0.1asdasd%',
-  gross: '$78,789,618',
-  liabilities: '$4,020,000'
+  total: '$99,769,618',
+  percentage: '+0.05%',
+  gross: '$102,789,618',
+  liabilities: '$3,020,000'
 })
 
 let dummy2Aus = ref({
-  total: '$74,769,618',
-  percentage: '+zxczxc0.1%',
-  gross: '$78,789,zxczxc618',
-  liabilities: '$4,020,000'
+  total: '$123,769,618',
+  percentage: '+0.7%',
+  gross: '$125,789,453',
+  liabilities: '$2,020,000'
 })
 
 let dummy2Usa = ref({
-  total: '$74,769avjnfcgvbjn,618',
-  percentage: '+0.1%',
-  gross: '$78,789,xcv618',
-  liabilities: '$4,020,000'
+  total: '$52,934,618',
+  percentage: '+0.2%',
+  gross: '$54,789,123',
+  liabilities: '$2,020,000'
 })
 
 let dummy2Europe = ref({
-  total: '$74,769asdas,618',
+  total: '$86,893,618',
   percentage: '+0.1%',
-  gross: '$78,789zxc,618',
+  gross: '$90,592,618',
   liabilities: '$4,020,000'
 })
 // <!-- end: populate data for gross income section -->
