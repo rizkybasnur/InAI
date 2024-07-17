@@ -33,7 +33,7 @@ const toggleCountry = (id) => {
     <button
       v-for="(item, index) in data"
       :key="index"
-      class="cursor-pointer padding-tab radius-24 bg-none item-center d-flex cardTabBig"
+      class="cursor-pointer padding-tab radius-24 bg-none item-center d-flex card-tab-big"
       :class="
         !item.active
           ? 'border-none grey-60'

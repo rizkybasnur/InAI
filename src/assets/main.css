@@ -357,8 +357,12 @@ nav a:first-of-type {
     display: none;
   }
 
-  .cardOutlineBig {
+  .card-outline-big {
     display: none;
+  }
+
+  .m-16-big {
+    margin: 16px 0;
   }
 }
 
@@ -385,11 +389,11 @@ nav a:first-of-type {
     margin-top: 1rem;
   }
 
-  .buttonSearch {
+  .button-search {
     display: none;
   }
 
-  .containerBig {
+  .container-big {
     padding: 1.5rem;
     background-color: white;
     border: 1px solid grey;
@@ -398,11 +402,11 @@ nav a:first-of-type {
     margin-right: 12px;
   }
 
-  .cardOutlineSmall {
+  .card-outline-small {
     display: none;
   }
 
-  .cardOutlineBig {
+  .card-outline-big {
     padding: 1.5rem;
     background-color: white;
     border: 1px solid grey;
@@ -410,7 +414,7 @@ nav a:first-of-type {
     width: 50%;
   }
 
-  .buttonAdd {
+  .button-add {
     display: none;
   }
 
@@ -432,15 +436,15 @@ nav a:first-of-type {
     width: 50%;
   }
 
-  .flexBig {
+  .flex-big {
     display: flex !important;
   }
 
-  .nonBig {
+  .display-non-big {
     display: none;
   }
 
-  .pBig {
+  .padding-none {
     padding: 0 !important;
   }
 
@@ -452,8 +456,12 @@ nav a:first-of-type {
     animation: typing 10s steps(120, end);
   }
 
-  .cardTabBig {
+  .card-tab-big {
     justify-content: center;
     width: 50%;
+  }
+
+  .m-16-big {
+    margin-bottom: 16px;
   }
 }

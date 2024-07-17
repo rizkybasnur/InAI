@@ -82,7 +82,7 @@ const countries = reactive([
       />
       <img class="cursor-pointer" alt="InAI" src="@/assets/icon/InAI.png" width="38" />
       <img
-        class="nonBig cursor-pointer"
+        class="display-non-big cursor-pointer"
         alt="Avatar"
         src="@/assets/icon/Button Icon (1).png"
         width="40"
@@ -100,7 +100,7 @@ const countries = reactive([
       >
         <div class="heading-xs-extrabold">Portfolio Dashboard</div>
 
-        <div class="buttonSearch">
+        <div class="button-search">
           <ButtonComponent useIcon urlIcon="../assets/icon/Magnify.png" />
         </div>
         <div class="inputSearch w-50">
@@ -120,21 +120,21 @@ const countries = reactive([
         </div>
       </div>
 
-      <div class="flexBig">
-        <div class="containerBig">
+      <div class="flex-big">
+        <div class="container-big">
           <TabsComponent :data="countries" />
 
           <CardComponent :data="countries" />
         </div>
 
-        <CardComponent class="cardOutlineBig" white no-chip />
+        <CardComponent class="card-outline-big" white no-chip />
       </div>
     </section>
     <!-- end: section net assets and gross income -->
 
     <!-- start: section button asset and entity -->
     <section
-      class="buttonAdd"
+      class="button-add"
       style="margin: 24px 0; display: flex; justify-content: space-between; gap: 8px"
     >
       <ButtonComponent
@@ -152,7 +152,7 @@ const countries = reactive([
     <!-- end: section button asset and entity -->
 
     <!-- start: section portfolio and ai suggestion -->
-    <section class="flexBig">
+    <section class="flex-big">
       <div
         class="portfolioBig"
         style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 16px"
@@ -175,10 +175,10 @@ const countries = reactive([
         </div>
       </div>
 
-      <CardComponent class="cardOutlineSmall" white no-chip />
+      <CardComponent class="card-outline-small" white no-chip />
 
       <div class="aiBig">
-        <div class="text-md-bold mb-16">AI suggested queries</div>
+        <div class="text-md-bold m-16-big">AI suggested queries</div>
         <div>
           <button
             v-for="(s, i) in suggestions"
@@ -188,7 +188,7 @@ const countries = reactive([
             <img src="@/assets/icon/MagicWandBlack.png" width="20" height="20" />
             {{ s }}
           </button>
-          <div class="nonBig" style="width: 100%; border-bottom: 1px solid #cbd5e1"></div>
+          <div class="display-non-big" style="width: 100%; border-bottom: 1px solid #cbd5e1"></div>
         </div>
       </div>
     </section>
@@ -196,7 +196,7 @@ const countries = reactive([
 
     <!-- start: section button customize and widget -->
     <section
-      class="pBig"
+      class="padding-none"
       style="margin-top: 16px; display: flex; justify-content: center; gap: 8px; padding: 0 24px"
     >
       <ButtonComponent
