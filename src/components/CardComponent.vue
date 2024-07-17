@@ -40,7 +40,7 @@ let dummy = ref({
 })
 
 let dummyAll = ref({
-  total: '$74,asdasd,618',
+  total: '$74,934,618',
   percentage: '+0.1%',
   gross: '$78,789,618',
   liabilities: '$4,020,000'
