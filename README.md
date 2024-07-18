@@ -35,4 +35,5 @@ npm run lint
 ```
 
 Check on your PC/Laptop screen to check the website version
+
 Inspect on your browser to see the mobile version
